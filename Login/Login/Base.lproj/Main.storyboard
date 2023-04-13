@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="VBX-2j-gwP"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="rCZ-cQ-epa"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="naj-lj-Xia" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -161,7 +161,6 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="SignupButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ajs-VC-DI4"/>
-                                            <action selector="signupButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ayP-hq-PfZ"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -189,12 +188,16 @@
                     </view>
                     <navigationItem key="navigationItem" id="u7a-d5-IYi"/>
                     <connections>
-                        <outlet property="emailOutlet" destination="oL2-i9-QcZ" id="wnC-Sq-APm"/>
+                        <outlet property="emailTextField" destination="oL2-i9-QcZ" id="yg5-8D-lGV"/>
                         <outlet property="emailUnderLine" destination="dcf-3v-LHX" id="ZKs-8Q-k2d"/>
+                        <outlet property="envelopImageView" destination="jv6-Jp-CZO" id="aaz-Om-C4G"/>
+                        <outlet property="lockImageView" destination="Lpd-3g-x7J" id="1Mb-q5-rD9"/>
                         <outlet property="loginButton" destination="Km9-rl-gY3" id="24a-br-rbl"/>
                         <outlet property="noAccountLabel" destination="5Xc-aS-oid" id="bOD-cp-PiW"/>
-                        <outlet property="passwordOutlet" destination="LfG-Om-nDE" id="rCR-sp-8Wg"/>
+                        <outlet property="passwordTextField" destination="LfG-Om-nDE" id="WoS-3S-LNm"/>
                         <outlet property="passwordUnderLine" destination="hfR-Y7-URT" id="22s-W9-tfm"/>
+                        <outlet property="signupButton" destination="gql-eR-oi0" id="J3z-HM-N0Y"/>
+                        <segue destination="y3S-GF-nSF" kind="show" identifier="goToHomePage" id="lU4-5j-e6H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -215,7 +218,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F0l-Su-jLM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="938" y="4"/>
+            <point key="canvasLocation" x="1390" y="4"/>
         </scene>
     </scenes>
     <resources>
