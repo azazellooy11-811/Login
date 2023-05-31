@@ -13,6 +13,7 @@
 		367FB36529E2ECC700BBEBF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 367FB36329E2ECC700BBEBF6 /* Main.storyboard */; };
 		367FB36729E2ECCB00BBEBF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 367FB36629E2ECCB00BBEBF6 /* Assets.xcassets */; };
 		367FB36A29E2ECCB00BBEBF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 367FB36829E2ECCB00BBEBF6 /* LaunchScreen.storyboard */; };
+		3690DC2C2A27922B00D9672F /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3690DC2B2A27922B00D9672F /* KeychainManager.swift */; };
 		36ABB0DB29E6F053005930AA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 36ABB0DD29E6F053005930AA /* Localizable.strings */; };
 		36ABB0E029E6F259005930AA /* String+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ABB0DF29E6F259005930AA /* String+Ex.swift */; };
 /* End PBXBuildFile section */
@@ -26,6 +27,7 @@
 		367FB36629E2ECCB00BBEBF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		367FB36929E2ECCB00BBEBF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		367FB36B29E2ECCB00BBEBF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3690DC2B2A27922B00D9672F /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		36ABB0D729E6EFEF005930AA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		36ABB0D829E6EFF0005930AA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		36ABB0DC29E6F053005930AA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			children = (
 				367FB35D29E2ECC700BBEBF6 /* AppDelegate.swift */,
 				367FB35F29E2ECC700BBEBF6 /* SceneDelegate.swift */,
+				3690DC2B2A27922B00D9672F /* KeychainManager.swift */,
 				367FB36129E2ECC700BBEBF6 /* ViewController.swift */,
 				36ABB0DF29E6F259005930AA /* String+Ex.swift */,
 				367FB36329E2ECC700BBEBF6 /* Main.storyboard */,
@@ -152,6 +155,7 @@
 				36ABB0E029E6F259005930AA /* String+Ex.swift in Sources */,
 				367FB35E29E2ECC700BBEBF6 /* AppDelegate.swift in Sources */,
 				367FB36029E2ECC700BBEBF6 /* SceneDelegate.swift in Sources */,
+				3690DC2C2A27922B00D9672F /* KeychainManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +314,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P892TSAJ89;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Login/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -337,6 +342,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P892TSAJ89;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Login/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

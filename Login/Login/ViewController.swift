@@ -22,6 +22,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var signupButton: UIButton!
     
     //MARK: - Properties
+    var isLogin = true
+    
     private let activeColor = UIColor.red
     private var email: String = "" {
         didSet {
@@ -42,9 +44,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setupLoginButton()
+        noAccountLabel.isHidden = !isLogin
+        signupButton.isHidden = !isLogin
         emailTextField.delegate = self
         passwordTextField.delegate = self
-        emailTextField.becomeFirstResponder()
+        //emailTextField.becomeFirstResponder()
     }
     
     //MARK: - IBActions
@@ -60,21 +64,30 @@ class ViewController: UIViewController {
             makeErrorField(textField: passwordTextField)
         }
         
-        if email == mockEmail,
-           password == mockPassword {
-            performSegue(withIdentifier: "goToHomePage", sender: sender)
+        if isLogin {
+            if KeychainManager.checkUser(with: email, password: password) {
+                performSegue(withIdentifier: "goToHomePage", sender: sender)
+            } else {
+                let alert = UIAlertController(title: "Error".localized,
+                                              message: "Wrong e-mail or password".localized,
+                                              preferredStyle: .alert)
+                let action = UIAlertAction(title: "OK".localized, style: .default)
+                alert.addAction(action)
+                present(alert, animated: true)
+            }
         } else {
-            let alert = UIAlertController(title: "Error".localized,
-                                          message: "Wrong e-mail or password".localized,
-                                          preferredStyle: .alert)
-            let action = UIAlertAction(title: "OK".localized, style: .default)
-            alert.addAction(action)
-            present(alert, animated: true)
+            if KeychainManager.save(email: email, password: password) {
+                performSegue(withIdentifier: "goToHomePage", sender: sender)
+            } else {
+                debugPrint("Error with saving e p")
+            }
         }
     }
     
     @IBAction func signupButtonAction(_ sender: Any) {
-        print("Signup")
+        guard let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController") as? ViewController else { return }
+        viewController.isLogin = false
+        navigationController?.pushViewController(viewController, animated: true)
     }
     
     //MARK: - Private methods
@@ -86,6 +99,8 @@ class ViewController: UIViewController {
         
         loginButton.isUserInteractionEnabled = false
         loginButton.backgroundColor = .gray
+        
+        loginButton.setTitle(isLogin ? "Login" : "Register", for: .normal)
     }
 }
 
